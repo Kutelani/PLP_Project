@@ -6,672 +6,563 @@
 <br />
 <br />
 
-<section class="section-content padding-y bg">
-    <div class="container">
-    <!-- ============================ COMPONENT BOOTSTRAP CARD WITH  IMG ================================= -->
-        <div class="row">
-            <div class="col-md-4">
-                <div class="card bg-dark">
-                  <img src="{% static 'img/banners/fruit-veggies.jpg' %}" class="card-img opacity" >
-                  <div class="card-img-overlay text-white">
-                    <h5 class="card-title text-white">Fruits and Vegs</h5>
-                    <p class="card-text">This is a wider card with text below</p>
-                    <a href="#" class="btn btn-light">Shop now</a>
-                  </div>
-                </div>
-            </div> <!-- col.// -->
-            <div class="col-md-4">
-                <div class="card bg-dark">
-                  <img src="{% static 'img/banners/Juice-Beverage.jpg' %}" class="card-img opacity">
-                  <div class="card-img-overlay text-white">
-                    <h5 class="card-title text-white">Beverage</h5>
-                    <p class="card-text">This is a wider card with text below</p>
-                    <a href="#" class="btn btn-light">Shop now</a>
-                  </div>
-                </div>
-            </div> <!-- col.// -->
-            <div class="col-md-4">
-                <div class="card bg-dark">
-                  <img src="{% static 'img/banners/grocery-store.jpg' %}" class="card-img opacity" >
-                  <div class="card-img-overlay text-white">
-                    <h5 class="card-title text-white">Grocery</h5>
-                    <p class="card-text">This is a wider card with text below</p>
-                    <a href="#" class="btn btn-light">Shop now</a>
-                  </div>
-                </div>
-            </div> <!-- col.// -->
-        </div> <!-- row.// -->
-        
-<br><br>
 
-
-<div class="row">
-		<div class="col-md-4">
-<!-- ============================ COMPONENT BANNER 1 ================================= -->
-<div class="card-banner" style="height:220px; background-image: url('{% static 'img/banners/Essential-Oils.jpg' %}');">
-  <article class="card-body caption">
-	<h5 class="card-title text-white">Health & Beauty</h5>
-	<p>No matter how far along you are in your sophistication as an amateur astronomer, there is always one.</p>
-	<a href="#" class="btn btn-warning"> Shop now </a>
-  </article>
-</div>
-<!-- ======================= COMPONENT BANNER 1  END .// ============================ -->
-		</div> <!-- col.// -->
-		<div class="col-md-4">
-<!-- ============================ COMPONENT BANNER 2 ================================= -->
-<div class="card-banner" style="height:220px; background-image: url('{% static 'img/banners/clothing.png' %}');">
-  <article class="card-body bg-gradient-green text-white">
-	<h5 class="card-title text-white">Clothing</h5>
-	<p>No matter how far along you are in your sophistication as an amateur astronomer, there is always one.</p>
-	<a href="#" class="btn btn-warning"> Shop now </a>
-  </article>
-</div>
-<!-- ============================ COMPONENT BANNER 2  END .// =========================== -->
-		</div> <!-- col.// -->
-		<div class="col-md-4">
-<!-- ============================ COMPONENT BANNER 3 ================================= -->
-<div class="card-banner" style="height:220px; background-image: url('{% static 'img/banners/5-Local-brands-1.png' %}');">
-  <article class="card-img-overlay bg-gradient-red text-white">
-	<h5 class="card-title text-white">Local Brands</h5>
-	<p>No matter how far along you are in your sophistication as an amateur astronomer, there is always one.</p>
-	<a href="#" class="btn btn-warning"> Shop now </a>
-  </article>
-</div>
-<!-- ============================ COMPONENT BANNER 3  END .// ================================= -->
-		</div> <!-- col.// -->
-</div> <!-- row.// -->
-
-    <!-- ============================ COMPONENTBOOTSTRAP CARD IMG  END .// ================================= -->
-    </div>
-    </section>
 
 <section class="section-content padding-y bg">
-<div class="container">
+	<div class="container">
 
-<!-- ============================ COMPONENTS 1  ================================= -->
-<div class="row">
-	<div class="col-md-3">
-		<figure class="card card-product-grid">
-			<div class="img-wrap"> <img src="../images/items/5.jpg"> </div>
-			<figcaption class="info-wrap border-top">
-				<a href="#" class="title">Bell & Ross Nightlum</a>
-				<div class="price mt-2">$299.00</div> <!-- price-wrap.// -->
-			</figcaption>
-		</figure> <!-- card // -->
-	</div> <!-- col.// -->
-	<div class="col-md-3">
-		<figure class="card card-product-grid">
-			<div class="img-wrap"> 
-				<img src="../images/items/6.jpg">
-				<span class="topbar">
-					<a href="#" class="float-right"><i class="fa fa-heart"></i></a>
-				</span>
-				<a class="btn-overlay" href="#"><i class="fa fa-search-plus"></i> Quick view</a>
+		<!-- ============================ COMPONENTS 1 MEAT  ================================= -->
+		<dev id="meat" name="meat">
+			<div class="row">
+				<div class="col-md-3">
+					<figure class="card card-product-grid">
+						<div class="img-wrap"> <img src="{% static 'img/chicken.jpg' %}"> </div>
+						<figcaption class="info-wrap border-top">
+							<a href="#" class="title">Bell & Ross Nightlum</a>
+							<!-- price-wrap.// -->
+						</figcaption>
+					</figure> <!-- card // -->
+				</div> <!-- col.// -->
+				<div class="col-md-3">
+					<figure class="card card-product-grid">
+						<div class="img-wrap">
+							<img src="{% static 'img/redmeat.jpg' %}">
+							<span class="topbar">
+								<a href="#" class="float-right"><i class="fa fa-heart"></i></a>
+							</span>
+							<a class="btn-overlay" href="#"><i class="fa fa-search-plus"></i> Quick view</a>
+						</div>
+						<figcaption class="info-wrap border-top">
+							<a href="#" class="title">Leather Sleeve - Macbook 13’’</a>
+							<!-- price-wrap.// -->
+						</figcaption>
+					</figure> <!-- card //  -->
+				</div> <!-- col.// -->
+				{% for product in products %}
+				<div class="col-md-3">
+					<figure class="card card-product-grid">
+						<div class="img-wrap">
+							<span class="topbar">
+								<span class="badge badge-success"> NEW </span>
+							</span>
+							<img src="{% static 'img/tbone.jpg' %}">
+							<a class="btn-overlay" href="{{product.get_url}}"><i class="fa fa-search-plus"></i> Quick view</a>
+						</div>
+						<figcaption class="info-wrap border-top">
+							<a href="#" class="title">{{product.name}}</a>
+							<div class="price-wrap mt-2">
+
+
+							</div> <!-- price-wrap.// -->
+						</figcaption>
+					</figure> <!-- card // -->
+				</div>
+				{% endfor %}
+				<!-- col.// -->
+				{% for product in products %}
+				<div class="col-md-3">
+					<figure class="card card-product-grid">
+						<div class="img-wrap">
+							<img src="{% static 'img/worse.jpg' %}">
+							<a class="btn-overlay" href="{{product.get_url}}"><i class="fa fa-search-plus"></i> Quick view</a>
+						</div>
+						<figcaption class="info-wrap border-top text-center">
+							<small class="text-uppercase font-weight-bolder text-warning">ELECTRONICS</small>
+							<p><a href="#" class="title">{{product.name}}</a></p>
+						</figcaption>
+					</figure>
+					<!-- card // -->
+				</div> <!-- col.// -->
 			</div>
-			<figcaption class="info-wrap border-top">
-				<a href="#" class="title">Leather Sleeve - Macbook 13’’</a>
-				<div class="price mt-2">$3753.00</div> <!-- price-wrap.// -->
-			</figcaption>
-		</figure> <!-- card //  -->
-  </div> <!-- col.// -->
-  {% for product in products %}
-	<div class="col-md-3">
-		<figure class="card card-product-grid">
-			<div class="img-wrap">
-				<span class="topbar">
-					<span class="badge badge-success"> NEW </span>
-				</span>
-        <img src="{{product.imageURL}}">
-        <a class="btn-overlay" href="{{product.get_url}}"><i class="fa fa-search-plus"></i> Quick view</a>
+			{% endfor %}
+			<br>
+			<hr>
+
+			<!--1st Product-->
+			{% for product in products %}
+			<div class="row mb-4">
+				<div class="col-md-5 col-lg-3 col-xl-3">
+
+					<div class="view zoom overlay z-depth-1 rounded mb-3 mb-md-0">
+						<img class="img-fluid w-100" src="{% static 'img/drumstick.jpg' %}"
+							 alt="Sample">
+						<a href="#!">
+							<div class="mask">
+								<img class="img-fluid w-100" src="{% static 'img/drumstick1.jpg' %}">
+								<div class="mask rgba-black-slight"></div>
+							</div>
+						</a>
+					</div>
+
+				</div>
+
+				<div class="col-md-7 col-lg-9 col-xl-9">
+					<div class="row">
+						<div class="col-lg-7 col-xl-7">
+
+							<!--	<h5>Drum Stick </h5>NAME-->
+							<p><a href="#" class="title">{{product.name}}</a></p>
+							<p class="mb-2 text-muted text-uppercase small">Shirts</p>
+							<ul class="rating">
+								<li>
+									<i class="fas fa-star fa-sm text-primary"></i>
+								</li>
+								<li>
+									<i class="fas fa-star fa-sm text-primary"></i>
+								</li>
+								<li>
+									<i class="fas fa-star fa-sm text-primary"></i>
+								</li>
+								<li>
+									<i class="fas fa-star fa-sm text-primary"></i>
+								</li>
+								<li>
+									<i class="fas fa-star fa-sm text-primary"></i>
+								</li>
+							</ul>
+							<hr>
+							<p class="mb-lg-0">
+								Butterflied chicken drumsticks are an obvious solution to make crispier,
+								more flavorful chicken drumsticks with much less cooking time. Take a few minutes to split
+								open the meat, season, and grill. You’re never going to stress about those high prices of
+								chicken drum again.
+							</p>
+
+						</div>
+						<div class="col-lg-5 col-xl-5">
+
+							<h6 class="mb-3"><span>$12.99 per kg</span></h6>
+							<div class="my-4">
+								<!--ADDING TO CART-->
+								<a class="btn-overlay" href="{{product.get_url}}"><i class="fa fa-search-plus"></i> Quick view</a>
+
+							</div>
+							<button type="button" class="btn btn-danger btn-md px-3 mb-lg-2 material-tooltip-main"
+									data-toggle="tooltip" data-placement="top" title="Add to wishlist">
+								<i class="far fa-heart"></i>
+							</button>
+
+						</div>
+					</div>
+				</div>
 			</div>
-			<figcaption class="info-wrap border-top">
-				<a href="#" class="title">{{product.name}}</a>
-					<div class="price-wrap mt-2">
-						<span class="price">R{{product.price}}</span>
-						
-					</div> <!-- price-wrap.// -->
-			</figcaption>
-		</figure> <!-- card // -->
-  </div>
-  {% endfor %}
-  <!-- col.// -->
-	<div class="col-md-3">
-		<figure class="card card-product-grid">
-			<div class="img-wrap"> 
-				<img src="../images/items/1.jpg">
+			{% endfor %}
+			<!--end of 1st Product-->
+			<!--2nd Product-->
+			<div class="row mb-4">
+				<div class="col-md-5 col-lg-3 col-xl-3">
+
+					<div class="view zoom overlay z-depth-1 rounded mb-3 mb-md-0">
+						<img class="img-fluid w-100" src="{% static 'img/fish.jpg' %}"
+							 alt="Sample">
+						<h4 class="mb-0"><span class="badge badge-dark badge-pill badge-news">Sold out</span></h4>
+						<a href="#!">
+							<div class="mask">
+								<img class="img-fluid w-100"
+									 src="{% static 'img/fish1.jpg' %}">
+								<div class="mask rgba-black-slight"></div>
+							</div>
+						</a>
+					</div>
+
+				</div>
+				<div class="col-md-7 col-lg-9 col-xl-9">
+					<div class="row">
+						<div class="col-lg-7 col-xl-7">
+
+							<h5>Fantasy Hake</h5>
+							<p class="mb-2 text-muted text-uppercase small">Shirts</p>
+							<ul class="rating">
+								<li>
+									<i class="fas fa-star fa-sm text-primary"></i>
+								</li>
+								<li>
+									<i class="fas fa-star fa-sm text-primary"></i>
+								</li>
+								<li>
+									<i class="fas fa-star fa-sm text-primary"></i>
+								</li>
+								<li>
+									<i class="fas fa-star fa-sm text-primary"></i>
+								</li>
+								<li>
+									<i class="far fa-star fa-sm text-primary"></i>
+								</li>
+							</ul>
+							<hr>
+							<p class="mb-lg-0">
+								Hake is a white fish that’s likened to
+								cod or halibut. It’s delicious, versatile, and makes the
+								perfect base for any fish recipe.
+							</p>
+
+						</div>
+						<div class="col-lg-5 col-xl-5">
+
+							<h6 class="mb-3">
+								<span class="text-danger mr-1">$12.99</span>
+								<span class="text-grey"><s>$36.99</s></span>
+							</h6>
+							<div class="my-4">
+								<button type="button" class="btn btn-primary btn-md mr-1 mb-2">
+									<i class="fas fa-shopping-cart pr-2"></i>Add to cart
+								</button>
+
+							</div>
+							<button type="button" class="btn btn-danger btn-md px-3 mb-lg-2 material-tooltip-main"
+									data-toggle="tooltip" data-placement="top" title="Add to wishlist">
+								<i class="far fa-heart"></i>
+							</button>
+
+						</div>
+					</div>
+				</div>
 			</div>
-			<figcaption class="info-wrap border-top text-center">
-				<small class="text-uppercase font-weight-bolder text-warning">ELECTRONICS</small>
-				<p><a href="#" class="title">IKEA Poäng Swivel Chair</a></p>	
-			</figcaption>
-		</figure> <!-- card // ->
-	</div> <!-- col.// -->
-</div>
-<!-- ============================ COMPONENTS 1  END .// ================================= -->
+			<!-- end of 2nd prodect-->
+			<!--3rd Product-->
+			<div class="row mb-4">
+				<div class="col-md-5 col-lg-3 col-xl-3">
 
-<br>
-<hr>
+					<div class="view zoom overlay z-depth-1 rounded mb-3 mb-md-0">
+						<img class="img-fluid w-100"
+							 src="{% static 'img/worse.jpg' %}">
+						alt="Sample">
+						<h4 class="mb-0"><span class="badge badge-primary badge-pill badge-news">Sale</span></h4>
+						<a href="#!">
+							<div class="mask">
+								<img class="img-fluid w-100"
+									 src="{% static 'img/worse1.jpg' %}">
+								<div class="mask rgba-black-slight"></div>
+							</div>
+						</a>
+					</div>
+
+				</div>
+				<div class="col-md-7 col-lg-9 col-xl-9">
+					<div class="row">
+						<div class="col-lg-7 col-xl-7">
+
+							<h5>Boerewors</h5>
+							<p class="mb-2 text-muted text-uppercase small">Shirts</p>
+							<ul class="rating">
+								<li>
+									<i class="fas fa-star fa-sm text-primary"></i>
+								</li>
+								<li>
+									<i class="fas fa-star fa-sm text-primary"></i>
+								</li>
+								<li>
+									<i class="fas fa-star fa-sm text-primary"></i>
+								</li>
+								<li>
+									<i class="fas fa-star fa-sm text-primary"></i>
+								</li>
+								<li>
+									<i class="fas fa-star fa-sm text-primary"></i>
+								</li>
+							</ul>
+							<hr>
+							<p class="mb-lg-0">
+								Boerewors seasoning characteristically includes coriander, black pepper,
+								nutmeg, and allspice, along with a dark vinegar (malt vinegar). The vinegar
+								and salt act to preserve the sausages as well as adding flavor.
+								This combination of spices and vinegar creates a unique flavor that is very
+								characteristic of South African cuisine.
+							</p>
+
+						</div>
+						<div class="col-lg-5 col-xl-5">
+
+							<h6 class="mb-3">
+								<span class="text-danger mr-1">$12.99</span>
+								<span class="text-grey"><s>$36.99</s></span>
+							</h6>
+							<div class="my-4">
+								<button type="button" class="btn btn-primary btn-md mr-1 mb-2">
+									<i class="fas fa-shopping-cart pr-2"></i>Add to cart
+								</button>
+
+							</div>
+							<button type="button" class="btn btn-danger btn-md px-3 mb-lg-2 material-tooltip-main"
+									data-toggle="tooltip" data-placement="top" title="Add to wishlist">
+								<i class="far fa-heart"></i>
+							</button>
+
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- end of 3rd Product-->
+			<!--4th Product-->
+			<div class="row mb-4">
+				<div class="col-md-5 col-lg-3 col-xl-3">
+
+					<div class="view zoom overlay z-depth-1 rounded mb-3 mb-md-0">
+						<img class="img-fluid w-100" src="{% static 'img/tbone1.jpg' %}"
+							 alt="Sample">
+						<a href="#!">
+							<div class="mask">
+								<img class="img-fluid w-100" src="{% static 'img/tbone.jpg' %}">
+								<div class="mask rgba-black-slight"></div>
+							</div>
+						</a>
+					</div>
+
+				</div>
+				<div class="col-md-7 col-lg-9 col-xl-9">
+					<div class="row">
+						<div class="col-lg-7 col-xl-7">
+
+							<h5>T Bone Stack </h5>
+							<p class="mb-2 text-muted text-uppercase small">Shirts</p>
+							<ul class="rating">
+								<li>
+									<i class="fas fa-star fa-sm text-primary"></i>
+								</li>
+								<li>
+									<i class="fas fa-star fa-sm text-primary"></i>
+								</li>
+								<li>
+									<i class="fas fa-star fa-sm text-primary"></i>
+								</li>
+								<li>
+									<i class="fas fa-star fa-sm text-primary"></i>
+								</li>
+								<li>
+									<i class="fas fa-star fa-sm text-primary"></i>
+								</li>
+							</ul>
+							<hr>
+							<p class="mb-lg-0">
+								Grill a T-bone steak with this easy homemade seasoning to make it taste
+								awesome. This spice blend is the best, as it doesn't overpower the steak
+								flavor. I can't eat a steak out anymore because I always compare it to this seasoning.
+							</p>
+
+						</div>
+						<div class="col-lg-5 col-xl-5">
+
+							<h6 class="mb-3"><span>$12.99 per KG</span></h6>
+							<div class="my-4">
+								<button type="button" class="btn btn-primary btn-md mr-1 mb-2">
+									<i class="fas fa-shopping-cart pr-2"></i>Add to cart
+								</button>
+							</div>
+							<button type="button" class="btn btn-danger btn-md px-3 mb-lg-2 material-tooltip-main"
+									data-toggle="tooltip" data-placement="top" title="Add to wishlist">
+								<i class="far fa-heart"></i>
+							</button>
+
+						</div>
+					</div>
+				</div>
+			</div>
+			<!--end of 4th Product-->
+			<!--5th Product-->
+			<div class="row mb-4">
+				<div class="col-md-5 col-lg-3 col-xl-3">
+
+					<div class="view zoom overlay z-depth-1 rounded mb-3 mb-md-0">
+						<img class="img-fluid w-100" src="{% static 'img/mixportion1.jpg' %}"
+							 alt="Sample">
+						<a href="#!">
+							<div class="mask">
+								<img class="img-fluid w-100" src="{% static 'img/mixportion.jpg' %}">
+								<div class="mask rgba-black-slight"></div>
+							</div>
+						</a>
+					</div>
+
+				</div>
+				<div class="col-md-7 col-lg-9 col-xl-9">
+					<div class="row">
+						<div class="col-lg-7 col-xl-7">
+
+							<h5>Mix Portion </h5>
+							<p class="mb-2 text-muted text-uppercase small">Shirts</p>
+							<ul class="rating">
+								<li>
+									<i class="fas fa-star fa-sm text-primary"></i>
+								</li>
+								<li>
+									<i class="fas fa-star fa-sm text-primary"></i>
+								</li>
+								<li>
+									<i class="fas fa-star fa-sm text-primary"></i>
+								</li>
+								<li>
+									<i class="fas fa-star fa-sm text-primary"></i>
+								</li>
+								<li>
+									<i class="fas fa-star fa-sm text-primary"></i>
+								</li>
+							</ul>
+							<hr>
+							<p class="mb-lg-0">
+								Warm yourself up from the inside with this simple, hearty
+								chicken stew mix. It has a slightly creamy texture and top notes of garlic, onions and herbs.
+							</p>
+
+						</div>
+						<div class="col-lg-5 col-xl-5">
+
+							<h6 class="mb-3"><span>$12.99 per KG</span></h6>
+							<div class="my-4">
+								<button type="button" class="btn btn-primary btn-md mr-1 mb-2">
+									<i class="fas fa-shopping-cart pr-2"></i>Add to cart
+								</button>
+							</div>
+							<button type="button" class="btn btn-danger btn-md px-3 mb-lg-2 material-tooltip-main"
+									data-toggle="tooltip" data-placement="top" title="Add to wishlist">
+								<i class="far fa-heart"></i>
+							</button>
+
+						</div>
+					</div>
+				</div>
+			</div>
+			<!--end of 5th Product-->
+			<!--6th Product-->
+			<div class="row mb-4">
+				<div class="col-md-5 col-lg-3 col-xl-3">
+
+					<div class="view zoom overlay z-depth-1 rounded mb-3 mb-md-0">
+						<img class="img-fluid w-100" src="{% static 'img/redmeat.jpg' %}"
+							 alt="Sample">
+						<a href="#!">
+							<div class="mask">
+								<img class="img-fluid w-100" src="{% static 'img/redmeat1.jpg' %}">
+								<div class="mask rgba-black-slight"></div>
+							</div>
+						</a>
+					</div>
+
+				</div>
+				<div class="col-md-7 col-lg-9 col-xl-9">
+					<div class="row">
+						<div class="col-lg-7 col-xl-7">
+
+							<h5>Red Meat </h5>
+							<p class="mb-2 text-muted text-uppercase small">Shirts</p>
+							<ul class="rating">
+								<li>
+									<i class="fas fa-star fa-sm text-primary"></i>
+								</li>
+								<li>
+									<i class="fas fa-star fa-sm text-primary"></i>
+								</li>
+								<li>
+									<i class="fas fa-star fa-sm text-primary"></i>
+								</li>
+								<li>
+									<i class="fas fa-star fa-sm text-primary"></i>
+								</li>
+								<li>
+									<i class="fas fa-star fa-sm text-primary"></i>
+								</li>
+							</ul>
+							<hr>
+							<p class="mb-lg-0">
+								This hearty entree is easy to prepare for Sunday dinner.
+								While the beef is slow cooking, the cook has lots of time to
+								attend to the other details. With mashed potatoes on the side,
+								it’s comfort food for the cool months ahead
+							</p>
+
+						</div>
+						<div class="col-lg-5 col-xl-5">
+
+							<h6 class="mb-3"><span>$12.99 per KG</span></h6>
+							<div class="my-4">
+								<button type="button" class="btn btn-primary btn-md mr-1 mb-2">
+									<i class="fas fa-shopping-cart pr-2"></i>Add to cart
+								</button>
+							</div>
+							<button type="button" class="btn btn-danger btn-md px-3 mb-lg-2 material-tooltip-main"
+									data-toggle="tooltip" data-placement="top" title="Add to wishlist">
+								<i class="far fa-heart"></i>
+							</button>
+
+						</div>
+					</div>
+				</div>
+			</div>
+		</dev>
+
+		<!--end of 6th Product-->
+		<br>
+		<hr>
+		<!-- ============================ END OF COMPONENTS 1 MEAT ================================= -->
+		<!-- ============================ ======================== ================================= -->
+		<!-- ============================ COMPONENTS 2 CLOTHING  ================================= -->
+		<div id="cloth" name="cloth">
+			<div class="row">
+				<div class="col-md-3">
+					<figure class="card card-product-grid">
+						<div class="img-wrap"> <img src="{% static 'img/5-Local-brands-1.png' %}"> </div>
+						<figcaption class="info-wrap border-top">
+							<a href="#" class="title">Bell & Ross Nightlum</a>
+							<!-- price-wrap.// -->
+						</figcaption>
+					</figure> <!-- card // -->
+				</div> <!-- col.// -->
+				<div class="col-md-3">
+					<figure class="card card-product-grid">
+						<div class="img-wrap">
+							<img src="{% static 'img/clothing.png' %}">
+							<span class="topbar">
+								<a href="#" class="float-right"><i class="fa fa-heart"></i></a>
+							</span>
+							<a class="btn-overlay" href="#"><i class="fa fa-search-plus"></i> Quick view</a>
+						</div>
+						<figcaption class="info-wrap border-top">
+							<a href="#" class="title">Leather Sleeve - Macbook 13’’</a>
+							<!-- price-wrap.// -->
+						</figcaption>
+					</figure> <!-- card //  -->
+				</div> <!-- col.// -->
+				{% for product in products %}
+				<div class="col-md-3">
+					<figure class="card card-product-grid">
+						<div class="img-wrap">
+							<span class="topbar">
+								<span class="badge badge-success"> NEW </span>
+							</span>
+							<img src="{% static 'img/cloths.jpg' %}">
+							<a class="btn-overlay" href="{{product.get_url}}"><i class="fa fa-search-plus"></i> Quick view</a>
+						</div>
+						<figcaption class="info-wrap border-top">
+							<a href="#" class="title">{{product.name}}</a>
+							<div class="price-wrap mt-2">
 
 
-<div class="row mb-4">
-    <div class="col-md-5 col-lg-3 col-xl-3">
+							</div> <!-- price-wrap.// -->
+						</figcaption>
+					</figure> <!-- card // -->
+				</div>
+				{% endfor %}
+				<!-- col.// -->
+				<div class="col-md-3">
+					<figure class="card card-product-grid">
+						<div class="img-wrap">
+							<img src="{% static 'img/banner4.jpg' %}">
+						</div>
+						<figcaption class="info-wrap border-top text-center">
+							<small class="text-uppercase font-weight-bolder text-warning">ELECTRONICS</small>
+							<p><a href="#" class="title">IKEA Poäng Swivel Chair</a></p>
+						</figcaption>
+					</figure>
+					<!-- card // ->
+				</div> <!-- col.// -->
+				</div>
+				<!-- ============================ COMPONENTS 1  END .// ================================= -->
 
-      <div class="view zoom overlay z-depth-1 rounded mb-3 mb-md-0">
-        <img class="img-fluid w-100"
-          src="https://mdbootstrap.com/img/Photos/Horizontal/E-commerce/Vertical/12a.jpg"
-          alt="Sample">
-        <a href="#!">
-          <div class="mask">
-            <img class="img-fluid w-100"
-              src="https://mdbootstrap.com/img/Photos/Horizontal/E-commerce/Vertical/12.jpg">
-            <div class="mask rgba-black-slight"></div>
-          </div>
-        </a>
-      </div>
 
-    </div>
-    <div class="col-md-7 col-lg-9 col-xl-9">
-      <div class="row">
-        <div class="col-lg-7 col-xl-7">
 
-          <h5>Fantasy T-shirt</h5>
-          <p class="mb-2 text-muted text-uppercase small">Shirts</p>
-          <ul class="rating">
-            <li>
-              <i class="fas fa-star fa-sm text-primary"></i>
-            </li>
-            <li>
-              <i class="fas fa-star fa-sm text-primary"></i>
-            </li>
-            <li>
-              <i class="fas fa-star fa-sm text-primary"></i>
-            </li>
-            <li>
-              <i class="fas fa-star fa-sm text-primary"></i>
-            </li>
-            <li>
-              <i class="fas fa-star fa-sm text-primary"></i>
-            </li>
-          </ul>
-          <hr>
-          <p class="mb-lg-0">Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam,
-            sapiente illo. Sit error voluptas repellat rerum quidem, soluta enim perferendis
-            voluptates laboriosam. Distinctio, officia quis dolore quos sapiente tempore alias.</p>
-
-        </div>
-        <div class="col-lg-5 col-xl-5">
-
-          <h6 class="mb-3"><span>$12.99</span></h6>
-          <div class="my-4">
-            <button type="button" class="btn btn-primary btn-md mr-1 mb-2"><i
-                class="fas fa-shopping-cart pr-2"></i>Add to cart</button>
-            <button type="button" class="btn btn-light btn-md mr-1 mb-2"><i
-                class="fas fa-info-circle pr-2"></i>Details</button>
-          </div>
-          <button type="button" class="btn btn-danger btn-md px-3 mb-lg-2 material-tooltip-main"
-            data-toggle="tooltip" data-placement="top" title="Add to wishlist"><i
-              class="far fa-heart"></i></button>
-
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <div class="row mb-4">
-    <div class="col-md-5 col-lg-3 col-xl-3">
-
-      <div class="view zoom overlay z-depth-1 rounded mb-3 mb-md-0">
-        <img class="img-fluid w-100"
-          src="https://mdbootstrap.com/img/Photos/Horizontal/E-commerce/Vertical/13a.jpg"
-          alt="Sample">
-        <h4 class="mb-0"><span class="badge badge-dark badge-pill badge-news">Sold out</span></h4>
-        <a href="#!">
-          <div class="mask">
-            <img class="img-fluid w-100"
-              src="https://mdbootstrap.com/img/Photos/Horizontal/E-commerce/Vertical/13.jpg">
-            <div class="mask rgba-black-slight"></div>
-          </div>
-        </a>
-      </div>
-
-    </div>
-    <div class="col-md-7 col-lg-9 col-xl-9">
-      <div class="row">
-        <div class="col-lg-7 col-xl-7">
-
-          <h5>Fantasy T-shirt</h5>
-          <p class="mb-2 text-muted text-uppercase small">Shirts</p>
-          <ul class="rating">
-            <li>
-              <i class="fas fa-star fa-sm text-primary"></i>
-            </li>
-            <li>
-              <i class="fas fa-star fa-sm text-primary"></i>
-            </li>
-            <li>
-              <i class="fas fa-star fa-sm text-primary"></i>
-            </li>
-            <li>
-              <i class="fas fa-star fa-sm text-primary"></i>
-            </li>
-            <li>
-              <i class="far fa-star fa-sm text-primary"></i>
-            </li>
-          </ul>
-          <hr>
-          <p class="mb-lg-0">Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam,
-            sapiente illo. Sit error voluptas repellat rerum quidem, soluta enim perferendis
-            voluptates laboriosam. Distinctio, officia quis dolore quos sapiente tempore alias.</p>
-
-        </div>
-        <div class="col-lg-5 col-xl-5">
-
-          <h6 class="mb-3">
-            <span class="text-danger mr-1">$12.99</span>
-            <span class="text-grey"><s>$36.99</s></span>
-          </h6>
-          <div class="my-4">
-            <button type="button" class="btn btn-primary btn-md mr-1 mb-2"><i
-                class="fas fa-shopping-cart pr-2"></i>Add to cart</button>
-            <button type="button" class="btn btn-light btn-md mr-1 mb-2"><i
-                class="fas fa-info-circle pr-2"></i>Details</button>
-          </div>
-          <button type="button" class="btn btn-danger btn-md px-3 mb-lg-2 material-tooltip-main"
-            data-toggle="tooltip" data-placement="top" title="Add to wishlist"><i
-              class="far fa-heart"></i></button>
-
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <div class="row mb-4">
-    <div class="col-md-5 col-lg-3 col-xl-3">
-
-      <div class="view zoom overlay z-depth-1 rounded mb-3 mb-md-0">
-        <img class="img-fluid w-100"
-          src="https://mdbootstrap.com/img/Photos/Horizontal/E-commerce/Vertical/14a.jpg"
-          alt="Sample">
-        <h4 class="mb-0"><span class="badge badge-primary badge-pill badge-news">Sale</span></h4>
-        <a href="#!">
-          <div class="mask">
-            <img class="img-fluid w-100"
-              src="https://mdbootstrap.com/img/Photos/Horizontal/E-commerce/Vertical/14.jpg">
-            <div class="mask rgba-black-slight"></div>
-          </div>
-        </a>
-      </div>
-
-    </div>
-    <div class="col-md-7 col-lg-9 col-xl-9">
-      <div class="row">
-        <div class="col-lg-7 col-xl-7">
-
-          <h5>Fantasy T-shirt</h5>
-          <p class="mb-2 text-muted text-uppercase small">Shirts</p>
-          <ul class="rating">
-            <li>
-              <i class="fas fa-star fa-sm text-primary"></i>
-            </li>
-            <li>
-              <i class="fas fa-star fa-sm text-primary"></i>
-            </li>
-            <li>
-              <i class="fas fa-star fa-sm text-primary"></i>
-            </li>
-            <li>
-              <i class="fas fa-star fa-sm text-primary"></i>
-            </li>
-            <li>
-              <i class="fas fa-star fa-sm text-primary"></i>
-            </li>
-          </ul>
-          <hr>
-          <p class="mb-lg-0">Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam,
-            sapiente illo. Sit error voluptas repellat rerum quidem, soluta enim perferendis
-            voluptates laboriosam. Distinctio, officia quis dolore quos sapiente tempore alias.</p>
-
-        </div>
-        <div class="col-lg-5 col-xl-5">
-
-          <h6 class="mb-3">
-            <span class="text-danger mr-1">$12.99</span>
-            <span class="text-grey"><s>$36.99</s></span>
-          </h6>
-          <div class="my-4">
-            <button type="button" class="btn btn-primary btn-md mr-1 mb-2"><i
-                class="fas fa-shopping-cart pr-2"></i>Add to cart</button>
-            <button type="button" class="btn btn-light btn-md mr-1 mb-2"><i
-                class="fas fa-info-circle pr-2"></i>Details</button>
-          </div>
-          <button type="button" class="btn btn-danger btn-md px-3 mb-lg-2 material-tooltip-main"
-            data-toggle="tooltip" data-placement="top" title="Add to wishlist"><i
-              class="far fa-heart"></i></button>
-
-        </div>
-      </div>
-    </div>
-  </div>
-<!-- ============================ COMPONENTS 2  ================================= -->
-<div class="row">
-	 <!-- col.// -->
-   <div class="container">
-     
-	<div class="col-md-3">
-		<figure class="card card-product-grid">
-			<a href="#" class="img-wrap"> 
-				<img src="../images/items/3.jpg">
-			</a>
-			<figcaption class="info-wrap">
-				<a href="#" class="title">Fjällräven Kånken Backpack Blue Ridge</a>
-				<div class="mt-2">
-					<var class="price">$84.00</var> <!-- price-wrap.// -->
-					<a href="#" class="btn btn-sm btn-outline-primary float-right">Add to cart <i class="fa fa-shopping-cart"></i></a>
-				</div> <!-- action-wrap.end -->
-			</figcaption>
-		</figure> <!-- card // -->
-	</div> <!-- col.// -->
-	
+			</div>
+		</div>
 	</div>
-
-	
-</div> <!-- row.// -->
-<!-- ============================ COMPONENTS 2  END .// ================================= -->
-
-<br>
-
-<!-- ============================ COMPONENTS 3  ================================= -->
-<div class="row">
-	<div class="col-md-4">
-		<figure class="card card-product-grid card-lg">
-			<div class="img-wrap"><img src="../images/items/9.jpg"></div>
-			<figcaption class="info-wrap">
-					<a class="title">Headset for gaming</a>
-					<p class="text-muted">Logitec</p>
-			</figcaption>
-			<div class="bottom-wrap">
-				<a href="" class="btn btn-primary float-right">Order Now</a>
-				<ul class="rating-stars">
-					<li style="width:80%" class="stars-active"> 
-						<i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i>
-					</li>
-					<li>
-						<i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i> 
-					</li>
-				</ul>	
-				<div class="price-wrap">
-					<span class="price">$19.00</span>
-				</div> <!-- price-wrap.// -->
-			</div> <!-- bottom-wrap.// -->
-		</figure>
-	</div> <!-- col.// -->
-
-	<div class="col-md-4">
-		<figure class="card card-product-grid card-lg">
-			<a href="#" class="img-wrap"><img src="../images/items/10.jpg"></a>
-			<figcaption class="info-wrap">
-					<p>
-						<a href="#" class="title">Another name of item</a>
-					</p>
-					<span class="tag">32 GB</span> <span class="tag">Brand new</span> 
-					<span class="tag">256 px</span>
-					<span class="tag">Water proof</span>
-			</figcaption>
-			<div class="bottom-wrap d-flex align-items-center">
-				<div class="mr-3"> <span class="price h5">$1280</span> </div> <!-- price.// -->	
-				<div class="ml-auto form-inline">
-					<select class="form-control mr-2">
-						<option>Size</option>
-						<option>XL</option>
-						<option>XS</option>
-					</select>
-					<select class="form-control mr-2">
-						<option>1</option>
-						<option>2</option>
-						<option>3</option>
-					</select>
-					<a href="#" class="btn btn-primary"><i class="fa fa-shopping-cart"></i></a>
-				</div>
-			</div> <!-- bottom-wrap.// -->
-		</figure>
-	</div> <!-- col.// -->
-
-	<div class="col-md-4">
-		<figure class="card card-product-grid card-lg">
-			<a href="#" class="img-wrap"><img src="../images/items/11.jpg"></a>
-			<figcaption class="info-wrap">
-					<a href="#" class="title">Another name of item</a>
-					<div class="rating-wrap">
-						<ul class="rating-stars">
-							<li style="width:80%" class="stars-active"> 
-								<i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i>
-							</li>
-							<li>
-								<i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i> 
-							</li>
-						</ul>
-					</div> <!-- rating-wrap.// -->
-			</figcaption>
-			<div class="bottom-wrap">
-				<a href="#" class="btn  btn-primary float-right"> Buy now </a>
-				<div class="price-wrap">
-					<span class="price h5">$1280</span> <br> <small class="text-success">Free shipping</small>
-				</div> <!-- price-wrap.// -->
-			</div> <!-- bottom-wrap.// -->
-		</figure>
-	</div> <!-- col.// -->
-
-</div> <!-- row.// -->
-<!-- ============================ COMPONENTS 3  END .// ================================= -->
-
-<br>
-
-<!-- ============================ COMPONENTS 4  ================================= -->
-<div class="card card-body">
-	<div class="row">
-		<div class="col-md-3">
-			<figure class="card-product-grid mb-0 card-sm">
-				<div class="img-wrap"> <img src="../images/items/1.jpg"> </div>
-				<figcaption class="info-wrap text-center">
-					<a href="#" class="title">Just another  product name goes here</a>
-					<div class="price mt-2">$299.00</div> <!-- price-wrap.// -->
-				</figcaption>
-			</figure> <!-- card // -->
-		</div> <!-- col.// -->
-
-		<div class="col-md-3">
-			<figure class="card-product-grid mb-0 card-sm">
-				<div class="img-wrap"> <img src="../images/items/2.jpg"> </div>
-				<figcaption class="info-wrap text-center">
-					<a href="#" class="title">Just another  product name goes here</a>
-					<div class="price mt-2">$299.00</div> <!-- price-wrap.// -->
-				</figcaption>
-			</figure> <!-- card // -->
-		</div> <!-- col.// -->
-
-		<div class="col-md-3">
-			<figure class="card-product-grid mb-0 card-sm">
-				<div class="img-wrap"> 
-					<img src="../images/items/3.jpg"> 
-					<span class="topbar">
-						<a href="#" class="float-right"><i class="fa fa-heart"></i></a>
-					</span>
-				</div>
-				<figcaption class="info-wrap text-center">
-					<a href="#" class="title">Just another  product name goes here</a>
-					<div class="price mt-2">$299.00</div> <!-- price-wrap.// -->
-				</figcaption>
-			</figure> <!-- card // -->
-		</div> <!-- col.// -->
-
-		<div class="col-md-3">
-			<figure class="card-product-grid mb-0  card-sm">
-				<div class="img-wrap"> <img src="../images/items/4.jpg"> 
-					<span class="topbar">
-						<a href="#" class="float-right"><i class="fa fa-heart"></i></a>
-					</span>
-				</div>
-				<figcaption class="info-wrap text-center">
-					<a href="#" class="title">Just another  product name goes here</a>
-					<div class="price mt-2">$299.00</div> <!-- price-wrap.// -->
-				</figcaption>
-			</figure> <!-- card // -->
-		</div> <!-- col.// -->
-	</div> <!-- row.// -->
-</div> <!-- card // -->
-<!-- ============================ COMPONENTS 4  END .// ================================= -->
-
-<br><br>
-
-<!-- ============================ COMPONENTS 5  ================================= -->
-<div class="card card-body">
-	<div class="row">
-		<div class="col-md-3">
-			<a href="#" class="itemside">
-				<div class="aside"><img src="../images/items/4.jpg" class="img-sm"></div>
-				<div class="info align-self-center">
-					<p class="title">Some name of item goes here nice</p>
-					<div class="price-wrap">
-						<span class="price">$1280</span>
-						<del class="price-old text-muted">$1980</del>
-					</div> <!-- price-wrap.// -->
-				</div>
-			</a>
-		</div> <!-- col.// -->
-
-		<div class="col-md-3">
-			<a href="#" class="itemside">
-				<div class="aside"><img src="../images/items/3.jpg" class="img-sm"></div>
-				<div class="info align-self-center">
-					<p class="title">Some name of item goes here nice</p>
-					<div class="price-wrap">
-						<span class="price">$1280</span>
-						<del class="price-old text-muted">$1980</del>
-					</div> <!-- price-wrap.// -->
-				</div>
-			</a>
-		</div> <!-- col.// -->
-
-		<div class="col-md-3">
-			<a href="#" class="itemside">
-				<div class="aside"><img src="../images/items/2.jpg" class="img-sm"></div>
-				<div class="info align-self-center">
-					<p class="title">Some name of item goes here nice</p>
-					<div class="price">$1280</div> <!-- price-wrap.// -->
-				</div>
-			</a>
-		</div> <!-- col.// -->
-
-		<div class="col-md-3">
-			<a href="#" class="itemside">
-				<div class="aside"><img src="../images/items/1.jpg" class="img-sm"></div>
-				<div class="info align-self-center">
-					<p class="title">Some name of item goes here nice</p>
-					<div class="price">$1280</div> <!-- price-wrap.// -->
-				</div>
-			</a>
-		</div> <!-- col.// -->
-	</div> <!-- row.// -->
-</div> <!-- card // -->
-
-<!-- ============================ COMPONENTS 5  END .// ================================= -->
-
-
-<br> <br>
-
-
-<!-- ============================ COMPONENTS 6  ================================= -->
-<div class="card card-body">
-	<div class="row">
-		<div class="col-md-3">
-			<figure class="itemside mb-4">
-				<div class="aside"><img src="../images/items/1.jpg" class="border img-sm"></div>
-				<figcaption class="info align-self-center">
-					<a href="#" class="title">Some name of item goes here nice</a>
-					<a href="#" class="btn btn-light text-primary btn-sm"> Add to cart </a>
-				</figcaption>
-			</figure>
-		</div> <!-- col.// -->
-
-		<div class="col-md-3">
-			<figure class="itemside mb-4">
-				<div class="aside"><img src="../images/items/2.jpg" class="border img-sm"></div>
-				<figcaption class="info align-self-center">
-					<a href="#" class="title">Great product name is here</a>
-					<a href="#" class="btn btn-light text-primary btn-sm"> Add to cart </a>
-				</figcaption>
-			</figure>
-		</div> <!-- col.// -->
-
-		<div class="col-md-3">
-			<figure class="itemside mb-4">
-				<div class="aside"><img src="../images/items/3.jpg" class="border img-sm"></div>
-				<figcaption class="info align-self-center">
-					<a href="#" class="title">Best name of item goes here demo</a>
-					<a href="#" class="btn btn-light text-primary btn-sm"> Add to cart </a>
-				</figcaption>
-			</figure>
-		</div> <!-- col.// -->
-
-		<div class="col-md-3">
-			<figure class="itemside mb-4">
-				<div class="aside"><img src="../images/items/4.jpg" class="border img-sm"></div>
-				<figcaption class="info align-self-center">
-					<a href="#" class="title">Some name of item goes here nice</a>
-					<a href="#" class="btn btn-light text-primary btn-sm"> Add to cart </a>
-				</figcaption>
-			</figure>
-		</div> <!-- col.// -->
-		<div class="col-md-3">
-			<figure class="itemside mb-4">
-				<div class="aside"><img src="../images/items/5.jpg" class="border img-sm"></div>
-				<figcaption class="info align-self-center">
-					<a href="#" class="title">Another name of item goes here</a>
-					<a href="#" class="btn btn-light text-primary btn-sm"> Add to cart </a>
-				</figcaption>
-			</figure>
-		</div> <!-- col.// -->
-
-		<div class="col-md-3">
-			<figure class="itemside mb-4">
-				<div class="aside"><img src="../images/items/6.jpg" class="border img-sm"></div>
-				<figcaption class="info align-self-center">
-					<a href="#" class="title">Great item name goes here nice</a>
-					<a href="#" class="btn btn-light text-primary btn-sm"> Add to cart </a>
-				</figcaption>
-			</figure>
-		</div> <!-- col.// -->
-
-		<div class="col-md-3">
-			<figure class="itemside mb-4">
-				<div class="aside"><img src="../images/items/7.jpg" class="border img-sm"></div>
-				<figcaption class="info align-self-center">
-					<a href="#" class="title">Some name of item goes here nice</a>
-					<a href="#" class="btn btn-light text-primary btn-sm"> Add to cart </a>
-				</figcaption>
-			</figure>
-		</div> <!-- col.// -->
-
-		<div class="col-md-3">
-			<figure class="itemside mb-4">
-				<div class="aside"><img src="../images/items/9.jpg" class="border img-sm"></div>
-				<figcaption class="info align-self-center">
-					<a href="#" class="title">Some name of item goes here nice</a>
-					<a href="#" class="btn btn-light text-primary btn-sm"> Add to cart </a>
-				</figcaption>
-			</figure>
-		</div> <!-- col.// -->
-	</div> <!-- row.// -->
-</div> <!-- card // -->
-
-<!-- ============================ COMPONENTS 6  END .// ================================= -->
-
-
-
-
-</div> <!-- container .//  -->
-</section>
-
+</section>		
     
 
 {% endblock content %}
